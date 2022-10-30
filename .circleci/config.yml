@@ -5,9 +5,15 @@ jobs:
    docker:
        - image: jruby:9.3
    steps:
-      cd frontend
-      npm install
-      npm run build
+       - checkout
+       - restore_cache:
+          keys: [frontend-build]
+       - run:
+          name: Lint frontend
+          command: |
+          cd frontend
+          npm install
+          npm run build
 workflows:
   my_workflow:
     jobs:
