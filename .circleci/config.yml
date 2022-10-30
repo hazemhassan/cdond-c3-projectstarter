@@ -40,11 +40,9 @@ jobs:
           cd frontend
           npm install
           npm run test
-           
 workflows:
   default:
     jobs:
       - build-frontend
       - build-backend
       - test-frontend
-          requires:[build-frontend]
