@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build-frontend:
    docker:
-       - image: jruby:9.3
+       - image: circleci/node:13.8.0
    steps:
        - checkout
        - restore_cache:
