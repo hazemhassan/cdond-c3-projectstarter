@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
- build-frondend:
+build-frondend:
  docker:
        - image: circleci/node:13.8.0
     steps:
