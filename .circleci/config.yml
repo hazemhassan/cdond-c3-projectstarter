@@ -16,7 +16,7 @@ build-backend:
       - npm install
       - npm run build
 workflow:
- default:
+mywork-flow:
   jobs:
    -build-frontend
    -build-backend
