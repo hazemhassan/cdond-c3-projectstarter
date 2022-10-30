@@ -4,7 +4,7 @@ jobs:
   build-frontend:
    docker:
        - image: jruby:9.3
-    steps:
+   steps:
       - cd frontend
       - checkout
       - run: npm i
