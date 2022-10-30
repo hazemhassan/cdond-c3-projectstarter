@@ -5,10 +5,9 @@ jobs:
    docker:
        - image: jruby:9.3
    steps:
-      - cd frontend
-      - checkout
-      - run: npm i
-      - run: npm run lint
+      cd frontend
+      npm install
+      npm run build
 workflows:
   my_workflow:
     jobs:
