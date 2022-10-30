@@ -11,9 +11,9 @@ jobs:
        - run:
           name: Lint frontend
           command: |
-          cd frontend
-          npm install
-          npm run build
+           cd frontend
+           npm install
+           npm run build
 workflows:
   my_workflow:
     jobs:
