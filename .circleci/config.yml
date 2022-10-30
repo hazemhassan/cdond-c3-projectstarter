@@ -1,22 +1,15 @@
 version: 2.1
+
 jobs:
- build-frondend:
-  docker:
-  - image: circleci/node:13.8.0
-  steps:
+  build-frontend:
+   docker:
+       - image: jruby:9.3
+    steps:
       - cd frontend
-      - npm install
-      - npm run build
-      
- build-backend:
-  docker:
-       - image: circleci/node:13.8.0
-  steps:
-      - cd backend
-      - npm install
-      - npm run build
-workflow:
- mywork-flow:
-  jobs:
-   -build-frontend
-   -build-backend
+      - checkout
+      - run: npm i
+      - run: npm run lint
+workflows:
+  my_workflow:
+    jobs:
+      - build-frontend
