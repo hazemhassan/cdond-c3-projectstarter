@@ -22,7 +22,7 @@ jobs:
        - restore_cache:
           keys: [backend-build]
        - run:
-          name: Lint frontend
+          name: build backend
           command: |
            cd backend
            npm install
