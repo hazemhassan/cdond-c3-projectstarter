@@ -1,5 +1,7 @@
 version: 2.1
-
+orbs:
+  node: 'circleci/node:4.1'
+  slack: circleci/slack@4.1
 jobs:
   build-frontend:
    docker:
@@ -14,6 +16,10 @@ jobs:
            cd frontend
            npm install
            npm run build
+        - slack/notify:
+           channel: ABCXYZ
+           event: fail
+           template: basic_fail_1
   build-backend:
    docker:
        - image: circleci/node:13.8.0
