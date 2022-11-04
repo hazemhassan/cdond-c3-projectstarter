@@ -16,7 +16,7 @@ jobs:
            npm install
            npm run build
        - slack/notify:
-          channel: ABCXYZ
+          channel: Circle-CI
           event: fail
           template: basic_fail_1
   build-backend:
