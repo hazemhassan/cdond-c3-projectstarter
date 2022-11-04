@@ -16,10 +16,10 @@ jobs:
            cd frontend
            npm install
            npm run build
-        - slack/notify:
-           channel: ABCXYZ
-           event: fail
-           template: basic_fail_1
+       - slack/notify:
+          channel: ABCXYZ
+          event: fail
+          template: basic_fail_1
   build-backend:
    docker:
        - image: circleci/node:13.8.0
