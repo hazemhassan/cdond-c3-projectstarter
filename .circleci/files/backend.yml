@@ -5,7 +5,7 @@ Parameters:
   ID:
     Description: Unique identifier.
     Type: String
-    Value: key-00ed09dd200408000
+    Default: key-00ed09dd200408000
 Resources:
   InstanceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
