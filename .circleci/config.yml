@@ -125,6 +125,7 @@ workflows:
   default:
     jobs:
       - create_infrastructure
+      - configure_infrastructure
       - build-frontend
       - build-backend
       - test-frontend:
