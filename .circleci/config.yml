@@ -160,4 +160,4 @@ workflows:
       - scan-backend:
          requires: [build-backend]
       - run-migrations:
-         requires: [configure-infrastructure]
+         requires: [configure_infrastructure]
